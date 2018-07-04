@@ -7,5 +7,6 @@ echo "============ Uploading to GitHub ============"
 git add \.
 git status
 git commit -m "$comment"
-git push
+git push origin
+git push gitlab
 echo "============ DONE ============"
