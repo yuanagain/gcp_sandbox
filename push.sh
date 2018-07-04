@@ -3,10 +3,12 @@
 comment=$1
 echo Commit comment: \"$comment\"
 # upload in this folder
-echo "============ Uploading to GitHub ============"
+echo "============ Comitting ============"
 git add \.
 git status
 git commit -m "$comment"
+echo "============ Uploading to GitHub ============"
 git push origin
+echo "============ Uploading to GitLab ============"
 git push gitlab
 echo "============ DONE ============"
