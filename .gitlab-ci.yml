@@ -10,6 +10,8 @@ deploy:
     - master
   script:
     - echo $GOOGLE_APP_ENGINE_KEY > /tmp/$CI_PIPELINE_ID.json
+    - echo $CI_PIPELINE_ID.json
+    - echo $GOOGLE_APP_ENGINE_KEY
     - gcloud auth activate-service-account --key-file /tmp/$CI_PIPELINE_ID.json
     - gcloud config set project $GOOGLE_PROJECT_ID
     - gcloud info
